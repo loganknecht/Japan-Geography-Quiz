@@ -1,0 +1,17 @@
+name: Setup
+description: Install Node (from .nvmrc), enable Yarn through corepack, and install dependencies
+
+runs:
+    using: composite
+    steps:
+        - uses: actions/setup-node@v7
+          with:
+              node-version-file: .nvmrc
+
+        - name: Enable corepack (provides the Yarn version from package.json)
+          shell: bash
+          run: npm install --global corepack@latest && corepack enable
+
+        - name: Install dependencies
+          shell: bash
+          run: yarn install --immutable
