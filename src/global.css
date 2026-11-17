@@ -1,0 +1,20 @@
+:root {
+    --color-page-background: #f3f4f6;
+    --color-text: #1f2937;
+    --color-header-background: #2f3e63;
+    --color-header-text: #fff;
+
+    font-family: system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-page-background);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}

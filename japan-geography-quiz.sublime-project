@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "folder_exclude_patterns": ["node_modules", "dist", ".yarn"]
+        }
+    ],
+    "settings": {
+        "js_prettier": {
+            "auto_format_on_save": true,
+            "auto_format_on_save_requires_prettier_config": true
+        },
+        "lsp_code_actions_on_save": {
+            "source.fixAll.eslint": true,
+            "source.fixAll.stylelint": true
+        }
+    }
+}

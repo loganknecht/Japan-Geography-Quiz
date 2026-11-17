@@ -1,0 +1,40 @@
+{
+    "name": "japan-geography-quiz",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "packageManager": "yarn@4.18.1+sha512.b2e1e7524f654f2749d32b4ebcb4622473cb5bcbc485df2007e12a154e50162a4d795526768bc5f5b8f81717bfd79deb2472813d86fb5ae2eb551fa9c872b08f",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
+        "preview": "vite preview",
+        "typecheck": "tsc -b",
+        "lint": "eslint . && stylelint \"src/**/*.css\"",
+        "lint:fix": "eslint . --fix && stylelint \"src/**/*.css\" --fix",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "fix": "yarn lint:fix && yarn format:fix"
+    },
+    "dependencies": {
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1",
+        "react-router": "^8.5.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.5",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitejs/plugin-react": "^6.3.0",
+        "eslint": "^9.39.5",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "eslint-plugin-simple-import-sort": "^14.0.0",
+        "prettier": "^3.10.1",
+        "stylelint": "^18.0.0",
+        "stylelint-config-standard": "^41.0.0",
+        "typescript": "~6.0.3",
+        "typescript-eslint": "^8.72.2",
+        "vite": "^8.3.8"
+    }
+}
