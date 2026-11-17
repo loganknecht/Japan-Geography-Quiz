@@ -2229,9 +2229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"japanese-geography-quiz@workspace:.":
+"japan-geography-quiz@workspace:.":
   version: 0.0.0-use.local
-  resolution: "japanese-geography-quiz@workspace:."
+  resolution: "japan-geography-quiz@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.39.5"
     "@types/react": "npm:^19.3.0"
