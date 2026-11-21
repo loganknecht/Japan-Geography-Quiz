@@ -12,7 +12,7 @@
     "quiz_type.regions": "Regions",
     "quiz_type.regions.description": "The 8 regions",
     "quiz_type.prefectures": "Prefectures",
-    "quiz_type.prefectures.description": "All Japan, one island, or one region",
+    "quiz_type.prefectures.description": "All prefectures, an island's prefectures, or the prefectures of a specific region.",
     "prefecture_scope.all_japan": "All Japan",
     "prefecture_scope.all": "All",
     "prefecture_scope.island": "Island",

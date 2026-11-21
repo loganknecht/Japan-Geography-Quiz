@@ -46,6 +46,38 @@
     background: linear-gradient(var(--color-selected-top), var(--color-selected-bottom));
 }
 
+.option_button.card {
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card_header {
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--color-button-border);
+    font-family: var(--font-label);
+    font-size: 1.15rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card_body {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+    background: rgb(0 0 0 / 15%);
+}
+
+.option_button.selected .card_header {
+    border-bottom-color: rgb(90 60 0 / 35%);
+}
+
+.option_button.selected .card_body {
+    background: rgb(255 255 255 / 25%);
+}
+
 .label {
     font-family: var(--font-label);
     font-weight: 800;

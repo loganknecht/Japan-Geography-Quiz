@@ -26,6 +26,7 @@ export const PlayModePicker = (): JSX.Element => {
                 onSelect={selectPlayMode}
                 label={<TranslatedText translation_key={PLAY_MODE_LABEL_KEYS[mode]} />}
                 description={<TranslatedText translation_key={PLAY_MODE_DESCRIPTION_KEYS[mode]} />}
+                layout="card"
             />
         );
         return play_mode_button;

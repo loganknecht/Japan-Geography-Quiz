@@ -33,6 +33,7 @@ export const ProgressionStylePicker = (): JSX.Element => {
                 label={<TranslatedText translation_key={PROGRESSION_STYLE_LABEL_KEYS[style]} />}
                 description={<TranslatedText translation_key={PROGRESSION_STYLE_DESCRIPTION_KEYS[style]} />}
                 tooltip={<TranslatedText translation_key={PROGRESSION_STYLE_TOOLTIP_KEYS[style]} />}
+                layout="card"
             />
         );
         return progression_button;

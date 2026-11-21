@@ -26,6 +26,7 @@ export const QuizTypePicker = (): JSX.Element => {
                 onSelect={selectQuizType}
                 label={<TranslatedText translation_key={QUIZ_TYPE_LABEL_KEYS[quiz_type]} />}
                 description={<TranslatedText translation_key={QUIZ_TYPE_DESCRIPTION_KEYS[quiz_type]} />}
+                layout="card"
             />
         );
         return quiz_type_button;
