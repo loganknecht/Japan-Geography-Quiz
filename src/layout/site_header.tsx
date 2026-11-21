@@ -15,7 +15,9 @@ export const SiteHeader = (): JSX.Element => {
                     <TranslatedText translation_key="site.title" />
                 </h1>
             </Link>
-            <SettingsMenu />
+            <div className={styles.settings_slot}>
+                <SettingsMenu />
+            </div>
         </header>
     );
     return header_element;

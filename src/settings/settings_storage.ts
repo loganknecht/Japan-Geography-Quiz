@@ -9,7 +9,7 @@ export const createDefaultSettings = (): SettingsState => {
     const default_settings: SettingsState = {
         language: detectBrowserLanguage(),
         theme_preference: "system",
-        inset_side: "left",
+        inset_side: "right",
         is_furigana_enabled: false,
         is_sound_enabled: true,
         should_skip_failed_answer_confirmation: false,

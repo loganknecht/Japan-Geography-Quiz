@@ -31,11 +31,11 @@ export const StagePicker = (): JSX.Element => {
         <fieldset className={styles.stage_group}>
             <legend className={styles.group_heading}>
                 <TranslatedText translation_key="menu.stages_heading" />
+                <span className={styles.heading_hint}>
+                    <TranslatedText translation_key="menu.stages_hint" />
+                </span>
             </legend>
             <div className={styles.stage_row}>{stage_checkboxes}</div>
-            <p className={styles.hint}>
-                <TranslatedText translation_key="menu.stages_hint" />
-            </p>
         </fieldset>
     );
     return picker_element;

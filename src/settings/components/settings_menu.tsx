@@ -1,5 +1,6 @@
 import { type JSX, type RefObject, useRef } from "react";
 
+import { GearIcon } from "../../components/gear_icon";
 import { TranslatedText } from "../../components/translated_text";
 import { usePlainTranslation } from "../../i18n/use_plain_translation";
 import { SettingsForm } from "./settings_form";
@@ -25,7 +26,7 @@ export const SettingsMenu = (): JSX.Element => {
                 aria-label={open_settings_label}
                 title={open_settings_label}
                 onClick={openSettings}>
-                <span aria-hidden="true">⚙</span>
+                <GearIcon />
             </button>
             <dialog ref={dialog_ref} className={styles.dialog}>
                 <form method="dialog" className={styles.dialog_content}>

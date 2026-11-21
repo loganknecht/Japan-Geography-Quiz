@@ -72,9 +72,12 @@
     cursor: not-allowed;
 }
 
-.hint {
-    margin: 8px 0 0;
+.heading_hint {
+    margin-left: 10px;
+    font-family: var(--font-body);
     font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-panel-text);
     opacity: 0.85;
 }
 
