@@ -107,8 +107,8 @@ export const PrefectureScopePicker = (): JSX.Element => {
     }
 
     const picker_element: JSX.Element = (
-        <fieldset className={styles.scope_drawer}>
-            <legend className={styles.scope_heading}>
+        <fieldset className={`${styles.attached_drawer} ${styles.drawer_column_3}`}>
+            <legend className={styles.drawer_heading}>
                 <TranslatedText translation_key="menu.grouping_heading" />
             </legend>
             <div className={styles.segment_row}>{kind_buttons}</div>

@@ -78,8 +78,14 @@
     transition: opacity 120ms ease-out;
 }
 
-.option:hover .tooltip,
-.option:focus-within .tooltip {
+.option:has(button:focus-visible) .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+@media (hover: hover) {
+    .option:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
 }
