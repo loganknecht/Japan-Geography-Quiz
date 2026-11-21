@@ -1,5 +1,6 @@
 import { ISLANDS_SOUTH_TO_NORTH } from "./islands";
-import type { Island, IslandId, Region, RegionId } from "./place_types";
+import type { Island, IslandId, Prefecture, PrefectureId, Region, RegionId } from "./place_types";
+import { PREFECTURES_NORTH_TO_SOUTH } from "./prefectures";
 import { REGIONS_SOUTH_TO_NORTH } from "./regions";
 
 const throwUnknownPlaceError = (place_id: string): never => {
@@ -23,4 +24,15 @@ export const findRegion = (region_id: RegionId): Region => {
     });
     const found_region: Region = matching_region ?? throwUnknownPlaceError(region_id);
     return found_region;
+};
+
+export const findPrefecture = (prefecture_id: PrefectureId): Prefecture => {
+    const matching_prefecture: Prefecture | undefined = PREFECTURES_NORTH_TO_SOUTH.find(
+        (prefecture: Prefecture): boolean => {
+            const is_matching_prefecture: boolean = prefecture.id === prefecture_id;
+            return is_matching_prefecture;
+        }
+    );
+    const found_prefecture: Prefecture = matching_prefecture ?? throwUnknownPlaceError(prefecture_id);
+    return found_prefecture;
 };

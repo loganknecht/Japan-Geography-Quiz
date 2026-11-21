@@ -2,6 +2,8 @@ import type { Dispatch, JSX } from "react";
 import { type NavigateFunction, useNavigate } from "react-router";
 
 import { TranslatedText } from "../../components/translated_text";
+import type { PrefectureId } from "../../places/place_types";
+import { buildQuestionIds } from "../../quiz/build_question_ids";
 import { useQuizDispatch } from "../../quiz/quiz_context";
 import type { QuizSetup } from "../../quiz/quiz_setup_types";
 import type { QuizAction } from "../../quiz/quiz_types";
@@ -19,7 +21,8 @@ export const StartButton = (): JSX.Element => {
 
     const startQuiz = (): void => {
         const quiz_setup: QuizSetup = buildQuizSetup(menu_selection);
-        dispatchQuiz({ type: "startQuiz", quiz_setup: quiz_setup });
+        const question_ids: PrefectureId[] = buildQuestionIds(quiz_setup);
+        dispatchQuiz({ type: "startQuiz", quiz_setup: quiz_setup, question_ids: question_ids });
         void navigate(PLAY_PATH);
     };
 
