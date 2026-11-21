@@ -1,18 +1,21 @@
 import type { JSX } from "react";
 import { Link } from "react-router";
 
+import { TranslatedText } from "../components/translated_text";
 import styles from "./not_found_page.module.css";
 
-export const NotFoundPage = (): JSX.Element => {
-    const page_title: string = "ページが見つかりません";
-    const home_link_text: string = "ホームに戻る";
-    const home_path: string = "/";
+const MENU_PATH: string = "/";
 
+export const NotFoundPage = (): JSX.Element => {
     const page_element: JSX.Element = (
-        <main className={styles.page}>
-            <h1>{page_title}</h1>
-            <Link to={home_path}>{home_link_text}</Link>
-        </main>
+        <section className={styles.panel}>
+            <h2 className={styles.heading}>
+                <TranslatedText translation_key="not_found.heading" />
+            </h2>
+            <Link to={MENU_PATH} className={styles.link}>
+                <TranslatedText translation_key="not_found.home_link" />
+            </Link>
+        </section>
     );
     return page_element;
 };
