@@ -1,0 +1,64 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.setting_row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.setting_label {
+    font-family: var(--font-label);
+    font-weight: 800;
+    color: var(--color-panel-heading);
+}
+
+.select {
+    padding: 8px 12px;
+    border: 3px solid var(--color-button-border);
+    border-radius: 8px;
+    font: inherit;
+    color: var(--color-button-text);
+    background: var(--color-button-bottom);
+}
+
+.toggle {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.toggle input {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    accent-color: var(--color-gold);
+}
+
+.toggle:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.toggle_hint {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+.border_toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.compact_options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 8px;
+}
