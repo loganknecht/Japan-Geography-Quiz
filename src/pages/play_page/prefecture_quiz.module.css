@@ -34,6 +34,7 @@
 
 .prompt_name {
     font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
     font-size: clamp(1.6rem, 5vw, 2.4rem);
     color: var(--color-gold);
     text-shadow: 2px 2px 0 var(--color-title-outline);
@@ -135,6 +136,7 @@
 
 .score_value {
     font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
     font-size: 3.5rem;
     line-height: 1;
     color: var(--color-gold);

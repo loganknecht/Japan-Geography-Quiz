@@ -48,6 +48,9 @@
 
 .inset_label {
     font-size: 24px;
+    cursor: text;
+    pointer-events: auto;
+    user-select: text;
 }
 
 .pointer_label {

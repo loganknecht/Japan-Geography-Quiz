@@ -152,11 +152,7 @@ export const JapanMap = ({ prefecture_fills, map_label, onPrefectureClick }: Jap
                         height={inset.height}
                         rx={INSET_CORNER_RADIUS}
                     />
-                    <text
-                        className={styles.inset_label}
-                        x={INSET_LABEL_INSET_X}
-                        y={INSET_LABEL_INSET_Y}
-                        aria-hidden="true">
+                    <text className={styles.inset_label} x={INSET_LABEL_INSET_X} y={INSET_LABEL_INSET_Y}>
                         {inset_label_text}
                     </text>
                     <PrefecturePaths
