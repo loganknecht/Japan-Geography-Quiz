@@ -2,8 +2,6 @@ export type Language = "ja" | "en" | "es";
 
 export type ThemePreference = "system" | "light" | "dark";
 
-export type InsetSide = "left" | "right";
-
 export type ToggleSettingName =
     | "is_furigana_enabled"
     | "is_sound_enabled"
@@ -17,7 +15,6 @@ export type ToggleSettingName =
 export interface SettingsState {
     language: Language;
     theme_preference: ThemePreference;
-    inset_side: InsetSide;
     is_furigana_enabled: boolean;
     is_sound_enabled: boolean;
     should_skip_failed_answer_confirmation: boolean;
@@ -31,11 +28,8 @@ export interface SettingsState {
 export type SettingsAction =
     | { type: "setLanguage"; language: Language }
     | { type: "setThemePreference"; theme_preference: ThemePreference }
-    | { type: "setInsetSide"; inset_side: InsetSide }
     | { type: "setToggle"; setting_name: ToggleSettingName; is_enabled: boolean };
 
 export const LANGUAGES: readonly Language[] = ["ja", "en", "es"];
 
 export const THEME_PREFERENCES: readonly ThemePreference[] = ["system", "light", "dark"];
-
-export const INSET_SIDES: readonly InsetSide[] = ["left", "right"];

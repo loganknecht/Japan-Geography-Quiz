@@ -11,10 +11,6 @@ export const settingsReducer = (state: SettingsState, action: SettingsAction): S
             next_state = { ...state, theme_preference: action.theme_preference };
             break;
         }
-        case "setInsetSide": {
-            next_state = { ...state, inset_side: action.inset_side };
-            break;
-        }
         case "setToggle": {
             next_state = { ...state, [action.setting_name]: action.is_enabled };
             break;

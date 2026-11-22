@@ -1,5 +1,5 @@
 import { detectBrowserLanguage } from "./detect_browser_language";
-import { INSET_SIDES, LANGUAGES, type SettingsState, THEME_PREFERENCES } from "./settings_types";
+import { LANGUAGES, type SettingsState, THEME_PREFERENCES } from "./settings_types";
 
 const SETTINGS_STORAGE_KEY: string = "japan-geography-quiz.settings";
 
@@ -9,7 +9,6 @@ export const createDefaultSettings = (): SettingsState => {
     const default_settings: SettingsState = {
         language: detectBrowserLanguage(),
         theme_preference: "system",
-        inset_side: "right",
         is_furigana_enabled: false,
         is_sound_enabled: true,
         should_skip_failed_answer_confirmation: false,
@@ -62,7 +61,6 @@ export const loadStoredSettings = (): SettingsState => {
             THEME_PREFERENCES,
             default_settings.theme_preference
         ),
-        inset_side: pickAllowedValue(stored_values.inset_side, INSET_SIDES, default_settings.inset_side),
         is_furigana_enabled: pickAllowedValue(
             stored_values.is_furigana_enabled,
             BOOLEAN_VALUES,

@@ -15,6 +15,7 @@
 .heading {
     margin: 0;
     font-family: var(--font-display);
+    font-weight: var(--font-display-weight);
     color: var(--color-gold);
     text-shadow: 2px 2px 0 var(--color-title-outline);
 }

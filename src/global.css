@@ -2,6 +2,7 @@
     --font-display: "Dela Gothic One", "Hiragino Sans", "Noto Sans JP", sans-serif;
     --font-label: "M PLUS Rounded 1c", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
     --font-body: "M PLUS Rounded 1c", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+    --font-display-weight: 400;
     --color-gold: #ffd23f;
     --color-title-outline: #b3121b;
     --color-focus-ring: #fff;
@@ -26,10 +27,28 @@
     --color-start-text: #fff;
     --color-start-shadow: #6e0a0f;
     --color-page-text: #1f1300;
+    --color-sea-top: #3c8ce0;
+    --color-sea-bottom: #2363b8;
+    --color-sea-inset: #2f7bd0;
+    --color-land: #7dd06a;
+    --color-land-hover: #b4ec8f;
+    --color-land-inactive: #9aa5a0;
+    --color-map-border: #17331a;
+    --color-map-border-faint: rgb(23 51 26 / 30%);
+    --color-outcome-first-try: #fff;
+    --color-outcome-retry: #ffd23f;
+    --color-outcome-failed: #e8323c;
+    --color-outcome-failed-label: #c8161f;
+    --color-pointer-outline: #7a3d00;
 
     font-family: var(--font-body);
     color: var(--color-page-text);
     background-color: var(--color-checker-light);
+}
+
+:root:lang(ja) {
+    --font-display: "M PLUS Rounded 1c", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    --font-display-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,6 +63,12 @@
         --color-button-border: #6f86e8;
         --color-button-shadow: #05082a;
         --color-page-text: #f2ecff;
+        --color-sea-top: #1c3f8a;
+        --color-sea-bottom: #0f2459;
+        --color-sea-inset: #183679;
+        --color-land: #5fb24e;
+        --color-land-hover: #8fd474;
+        --color-land-inactive: #5d6663;
     }
 }
 
@@ -58,6 +83,12 @@
     --color-button-border: #6f86e8;
     --color-button-shadow: #05082a;
     --color-page-text: #f2ecff;
+    --color-sea-top: #1c3f8a;
+    --color-sea-bottom: #0f2459;
+    --color-sea-inset: #183679;
+    --color-land: #5fb24e;
+    --color-land-hover: #8fd474;
+    --color-land-inactive: #5d6663;
 }
 
 *,

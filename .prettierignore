@@ -1,3 +1,4 @@
 dist
 .yarn
 yarn.lock
+src/map/prefecture_map_data.json
