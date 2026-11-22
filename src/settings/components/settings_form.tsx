@@ -2,7 +2,6 @@ import type { JSX } from "react";
 
 import { TranslatedText } from "../../components/translated_text";
 import { useSettingsState } from "../settings_context";
-import { InsetSideSetting } from "./inset_side_setting";
 import { LanguageSetting } from "./language_setting";
 import styles from "./settings_form.module.css";
 import { ThemeSetting } from "./theme_setting";
@@ -27,7 +26,6 @@ export const SettingsForm = (): JSX.Element => {
                 setting_name="should_skip_failed_answer_confirmation"
                 label_key="settings.skip_failed_answer_confirmation"
             />
-            <InsetSideSetting />
             <div className={styles.setting_row}>
                 <span className={styles.setting_label}>
                     <TranslatedText translation_key="settings.borders" />

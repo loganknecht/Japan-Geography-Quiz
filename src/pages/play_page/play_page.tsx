@@ -2,15 +2,17 @@ import type { Dispatch, JSX } from "react";
 import { Navigate, type NavigateFunction, useNavigate } from "react-router";
 
 import { TranslatedText } from "../../components/translated_text";
+import { isPlayableQuiz } from "../../quiz/build_quiz_start";
 import { useQuizDispatch, useQuizState } from "../../quiz/quiz_context";
 import type { QuizAction } from "../../quiz/quiz_types";
+import { PlaceQuiz } from "./place_quiz";
 import styles from "./play_page.module.css";
 import { QuizSetupSummary } from "./quiz_setup_summary";
 
 const MENU_PATH: string = "/";
 
 export const PlayPage = (): JSX.Element => {
-    const { quiz_setup } = useQuizState();
+    const { quiz_setup, quiz_session } = useQuizState();
     const dispatchQuiz: Dispatch<QuizAction> = useQuizDispatch();
     const navigate: NavigateFunction = useNavigate();
     const has_no_quiz_setup = quiz_setup === null;
@@ -18,6 +20,13 @@ export const PlayPage = (): JSX.Element => {
     if (has_no_quiz_setup === true) {
         const redirect_element: JSX.Element = <Navigate to={MENU_PATH} replace />;
         return redirect_element;
+    }
+
+    const has_quiz_session = quiz_session !== null;
+    const is_playable_quiz = isPlayableQuiz(quiz_setup) === true && has_quiz_session === true;
+    if (is_playable_quiz === true) {
+        const quiz_element: JSX.Element = <PlaceQuiz quiz_setup={quiz_setup} quiz_session={quiz_session} />;
+        return quiz_element;
     }
 
     const returnToMenu = (): void => {
