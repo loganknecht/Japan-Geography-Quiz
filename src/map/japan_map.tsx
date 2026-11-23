@@ -59,6 +59,28 @@ const InsetPointer = ({ pointer, label_text }: InsetPointerProps): JSX.Element =
     return pointer_element;
 };
 
+interface CoastlineProps {
+    paths: PrefectureMapData["paths"];
+}
+
+const Coastline = ({ paths }: CoastlineProps): JSX.Element => {
+    const path_elements: JSX.Element[] = [];
+    for (const prefecture of PREFECTURES_NORTH_TO_SOUTH) {
+        const path_data: string | undefined = paths[prefecture.code];
+        const has_no_path = path_data === undefined;
+        if (has_no_path === true) {
+            continue;
+        }
+        path_elements.push(<path key={prefecture.id} d={path_data} />);
+    }
+    const coastline_element: JSX.Element = (
+        <g className={styles.coastline} aria-hidden="true">
+            {path_elements}
+        </g>
+    );
+    return coastline_element;
+};
+
 interface PrefecturePathsProps {
     paths: PrefectureMapData["paths"];
     key_suffix: string;
@@ -140,7 +162,8 @@ export const JapanMap = ({
     const [hovered_group, setHoveredGroup] = useState<string | null>(null);
     const is_prefecture_layer = place_layer === "prefectures";
     const is_region_layer = place_layer === "regions";
-    const svg_class_name: string = is_prefecture_layer === true ? styles.svg : `${styles.svg} ${styles.grouped}`;
+    const is_grouped_layer = is_prefecture_layer === false;
+    const svg_class_name: string = is_grouped_layer === true ? `${styles.svg} ${styles.grouped}` : styles.svg;
     const map_name: string = usePlainTranslation("map.label");
     const inset_label_text: string = usePlainTranslation("map.inset_label");
     const container_ref: RefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
@@ -181,6 +204,7 @@ export const JapanMap = ({
     const map_element: JSX.Element = (
         <div ref={container_ref} className={styles.map} style={{ aspectRatio: map_aspect_ratio }}>
             <svg className={svg_class_name} viewBox={view_box_text} role="img" aria-label={map_name}>
+                <Coastline paths={PREFECTURE_MAP_DATA.paths} />
                 <PrefecturePaths
                     paths={PREFECTURE_MAP_DATA.paths}
                     key_suffix="main"
@@ -202,6 +226,7 @@ export const JapanMap = ({
                     <text className={styles.inset_label} x={INSET_LABEL_INSET_X} y={INSET_LABEL_INSET_Y}>
                         {inset_label_text}
                     </text>
+                    <Coastline paths={inset.paths} />
                     <PrefecturePaths
                         paths={inset.paths}
                         key_suffix="inset"

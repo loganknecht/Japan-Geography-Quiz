@@ -5,6 +5,7 @@ import { type JSX, StrictMode } from "react";
 import { createRoot, type Root } from "react-dom/client";
 
 import { App } from "./app";
+import { blockClicksThatSelectText } from "./utilities/block_clicks_that_select_text";
 
 const ROOT_ELEMENT_ID: string = "root";
 
@@ -23,4 +24,5 @@ const app_element: JSX.Element = (
     </StrictMode>
 );
 
+blockClicksThatSelectText();
 react_root.render(app_element);

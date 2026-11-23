@@ -33,11 +33,6 @@ export const PROGRESSION_STYLE_DESCRIPTION_KEYS: Record<ProgressionStyle, Transl
     total_area: "progression.total_area.description"
 };
 
-export const PROGRESSION_STYLE_TOOLTIP_KEYS: Record<ProgressionStyle, TranslationKey> = {
-    area_by_area: "progression.area_by_area.tooltip",
-    total_area: "progression.total_area.tooltip"
-};
-
 export const PREFECTURE_GROUPING_LABEL_KEYS: Record<PrefectureGrouping, TranslationKey> = {
     none: "grouping.none",
     island: "grouping.island",

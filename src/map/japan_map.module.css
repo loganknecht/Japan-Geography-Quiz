@@ -101,14 +101,60 @@
     fill: var(--color-land-hover);
 }
 
+.coastline {
+    fill: none;
+    stroke: var(--color-map-border);
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+.coastline path {
+    vector-effect: non-scaling-stroke;
+}
+
+.grouped .coastline {
+    stroke-width: 2.25px;
+}
+
 .grouped .prefecture {
-    stroke: var(--color-map-border-faint);
+    transition:
+        fill 120ms ease-out,
+        stroke 120ms ease-out;
+}
+
+.grouped .untouched {
+    stroke: var(--color-land);
+}
+
+.grouped .untouched.hovered {
+    stroke: var(--color-land-hover);
+}
+
+.grouped .inactive {
+    stroke: var(--color-land-inactive);
+}
+
+.grouped .first_try {
+    stroke: var(--color-outcome-first-try);
+}
+
+.grouped .retry {
+    stroke: var(--color-outcome-retry);
+}
+
+.grouped .failed {
+    stroke: var(--color-outcome-failed);
+}
+
+.grouped .revealing {
+    animation-name: reveal-flash-grouped;
 }
 
 .region_lines {
     fill: none;
     stroke: var(--color-map-border);
-    stroke-width: 2px;
+    stroke-width: 0.75px;
     stroke-linecap: round;
     stroke-linejoin: round;
     vector-effect: non-scaling-stroke;
@@ -122,6 +168,18 @@
 
     50% {
         fill: var(--color-outcome-first-try);
+    }
+}
+
+@keyframes reveal-flash-grouped {
+    0% {
+        fill: var(--color-outcome-failed);
+        stroke: var(--color-outcome-failed);
+    }
+
+    50% {
+        fill: var(--color-outcome-first-try);
+        stroke: var(--color-outcome-first-try);
     }
 }
 
