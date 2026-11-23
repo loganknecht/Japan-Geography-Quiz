@@ -12,41 +12,16 @@
     box-shadow: 0 8px 0 var(--color-panel-shadow);
 }
 
+.wide_panel {
+    width: min(1500px, 100%);
+}
+
 .heading {
     margin: 0;
     font-family: var(--font-display);
     font-weight: var(--font-display-weight);
     color: var(--color-gold);
     text-shadow: 2px 2px 0 var(--color-title-outline);
-}
-
-.summary {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.mode {
-    margin: 0;
-    font-family: var(--font-label);
-    font-weight: 800;
-    font-size: 1.2rem;
-}
-
-.details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.details li {
-    padding: 4px 12px;
-    border: 2px solid var(--color-gold);
-    border-radius: 999px;
-    background: var(--color-button-bottom);
 }
 
 .back_button {

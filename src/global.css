@@ -33,8 +33,7 @@
     --color-land: #7dd06a;
     --color-land-hover: #b4ec8f;
     --color-land-inactive: #9aa5a0;
-    --color-map-border: #17331a;
-    --color-map-border-faint: rgb(23 51 26 / 30%);
+    --color-map-border: #000;
     --color-outcome-first-try: #fff;
     --color-outcome-retry: #ffd23f;
     --color-outcome-failed: #e8323c;

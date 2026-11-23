@@ -211,3 +211,20 @@
     outline: 3px solid var(--color-focus-ring);
     outline-offset: 3px;
 }
+
+.layer_chip {
+    padding: 2px 10px;
+    border: 2px solid var(--color-gold);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--color-panel-heading);
+    background: var(--color-button-bottom);
+}
+
+.stat_detail {
+    margin-left: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    opacity: 0.8;
+}

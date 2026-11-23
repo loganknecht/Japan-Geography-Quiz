@@ -177,13 +177,13 @@
     gap: 6px;
 }
 
-.segment_row button {
+.segment_row [role="button"] {
     align-items: center;
     padding: 6px 4px;
     text-align: center;
 }
 
-.segment_row button > span {
+.segment_row [role="button"] > span {
     font-size: 0.9rem;
     white-space: nowrap;
 }
@@ -194,11 +194,11 @@
     gap: 6px;
 }
 
-.scope_list button {
+.scope_list [role="button"] {
     padding: 6px 10px;
 }
 
-.scope_list button > span {
+.scope_list [role="button"] > span {
     font-size: 0.95rem;
 }
 

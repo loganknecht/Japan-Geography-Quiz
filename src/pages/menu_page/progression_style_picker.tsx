@@ -2,11 +2,7 @@ import type { Dispatch, JSX } from "react";
 
 import { OptionButton } from "../../components/option_button";
 import { TranslatedText } from "../../components/translated_text";
-import {
-    PROGRESSION_STYLE_DESCRIPTION_KEYS,
-    PROGRESSION_STYLE_LABEL_KEYS,
-    PROGRESSION_STYLE_TOOLTIP_KEYS
-} from "../../quiz/quiz_setup_labels";
+import { PROGRESSION_STYLE_DESCRIPTION_KEYS, PROGRESSION_STYLE_LABEL_KEYS } from "../../quiz/quiz_setup_labels";
 import type { ProgressionStyle } from "../../quiz/quiz_setup_types";
 import styles from "./menu_page.module.css";
 import { useMenuSelectionDispatch, useMenuSelectionState } from "./menu_selection_context";
@@ -32,7 +28,6 @@ export const ProgressionStylePicker = (): JSX.Element => {
                 onSelect={selectProgressionStyle}
                 label={<TranslatedText translation_key={PROGRESSION_STYLE_LABEL_KEYS[style]} />}
                 description={<TranslatedText translation_key={PROGRESSION_STYLE_DESCRIPTION_KEYS[style]} />}
-                tooltip={<TranslatedText translation_key={PROGRESSION_STYLE_TOOLTIP_KEYS[style]} />}
                 layout="card"
             />
         );

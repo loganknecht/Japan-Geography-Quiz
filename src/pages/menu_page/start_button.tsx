@@ -1,6 +1,7 @@
 import type { Dispatch, JSX } from "react";
 import { type NavigateFunction, useNavigate } from "react-router";
 
+import { TextButton } from "../../components/text_button";
 import { TranslatedText } from "../../components/translated_text";
 import { buildQuizStart } from "../../quiz/build_quiz_start";
 import { useQuizDispatch } from "../../quiz/quiz_context";
@@ -26,9 +27,9 @@ export const StartButton = (): JSX.Element => {
     };
 
     const start_button: JSX.Element = (
-        <button type="button" className={styles.start_button} onClick={startQuiz}>
+        <TextButton class_name={styles.start_button} onPress={startQuiz}>
             <TranslatedText translation_key="menu.start" />
-        </button>
+        </TextButton>
     );
     return start_button;
 };

@@ -10,7 +10,8 @@ export type ToggleSettingName =
     | "is_region_border_visible"
     | "is_prefecture_border_visible"
     | "is_flag_visible"
-    | "is_local_flavor_visible";
+    | "is_local_flavor_visible"
+    | "should_collapse_perfect_sections";
 
 export interface SettingsState {
     language: Language;
@@ -23,6 +24,7 @@ export interface SettingsState {
     is_prefecture_border_visible: boolean;
     is_flag_visible: boolean;
     is_local_flavor_visible: boolean;
+    should_collapse_perfect_sections: boolean;
 }
 
 export type SettingsAction =

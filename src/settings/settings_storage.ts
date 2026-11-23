@@ -16,7 +16,8 @@ export const createDefaultSettings = (): SettingsState => {
         is_region_border_visible: true,
         is_prefecture_border_visible: true,
         is_flag_visible: true,
-        is_local_flavor_visible: false
+        is_local_flavor_visible: false,
+        should_collapse_perfect_sections: false
     };
     return default_settings;
 };
@@ -100,6 +101,11 @@ export const loadStoredSettings = (): SettingsState => {
             stored_values.is_local_flavor_visible,
             BOOLEAN_VALUES,
             default_settings.is_local_flavor_visible
+        ),
+        should_collapse_perfect_sections: pickAllowedValue(
+            stored_values.should_collapse_perfect_sections,
+            BOOLEAN_VALUES,
+            default_settings.should_collapse_perfect_sections
         )
     };
     return loaded_settings;

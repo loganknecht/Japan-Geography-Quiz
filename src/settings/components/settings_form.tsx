@@ -20,12 +20,22 @@ export const SettingsForm = (): JSX.Element => {
                 hint_key="settings.furigana_japanese_only"
                 is_disabled={is_furigana_unavailable}
             />
-            <ToggleSetting setting_name="is_sound_enabled" label_key="settings.sound" />
+            <div className={styles.setting_row}>
+                <span className={styles.setting_label}>
+                    <TranslatedText translation_key="settings.audio_heading" />
+                </span>
+                <ToggleSetting setting_name="is_sound_enabled" label_key="settings.sound" />
+            </div>
             <ThemeSetting />
-            <ToggleSetting
-                setting_name="should_skip_failed_answer_confirmation"
-                label_key="settings.skip_failed_answer_confirmation"
-            />
+            <div className={styles.setting_row}>
+                <span className={styles.setting_label}>
+                    <TranslatedText translation_key="settings.gameplay_heading" />
+                </span>
+                <ToggleSetting
+                    setting_name="should_skip_failed_answer_confirmation"
+                    label_key="settings.skip_failed_answer_confirmation"
+                />
+            </div>
             <div className={styles.setting_row}>
                 <span className={styles.setting_label}>
                     <TranslatedText translation_key="settings.borders" />
@@ -41,6 +51,15 @@ export const SettingsForm = (): JSX.Element => {
             </div>
             <ToggleSetting setting_name="is_flag_visible" label_key="settings.flags" />
             <ToggleSetting setting_name="is_local_flavor_visible" label_key="settings.local_flavor" />
+            <div className={styles.setting_row}>
+                <span className={styles.setting_label}>
+                    <TranslatedText translation_key="settings.score_heading" />
+                </span>
+                <ToggleSetting
+                    setting_name="should_collapse_perfect_sections"
+                    label_key="settings.collapse_perfect_sections"
+                />
+            </div>
         </div>
     );
     return form_element;
