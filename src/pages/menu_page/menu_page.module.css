@@ -72,6 +72,28 @@
     cursor: not-allowed;
 }
 
+.randomize_checkbox {
+    align-items: flex-start;
+}
+
+.randomize_checkbox input {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.randomize_text {
+    display: block;
+}
+
+.randomize_explanation {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
 .heading_hint {
     margin-left: 10px;
     font-family: var(--font-body);
@@ -220,7 +242,7 @@
         grid-column: 1;
     }
 
-    .segment_row button > span {
+    .segment_row [role="button"] > span {
         font-size: 0.8rem;
     }
 }

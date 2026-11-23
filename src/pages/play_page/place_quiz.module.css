@@ -20,10 +20,22 @@
     box-shadow: 0 6px 0 var(--color-panel-shadow);
 }
 
+.hud_islands {
+    background: linear-gradient(var(--color-layer-islands-top), var(--color-layer-islands-bottom));
+}
+
+.hud_regions {
+    background: linear-gradient(var(--color-layer-regions-top), var(--color-layer-regions-bottom));
+}
+
+.hud_prefectures {
+    background: linear-gradient(var(--color-layer-prefectures-top), var(--color-layer-prefectures-bottom));
+}
+
 .prompt {
     display: flex;
     gap: 12px;
-    align-items: baseline;
+    align-items: center;
 }
 
 .prompt_label {

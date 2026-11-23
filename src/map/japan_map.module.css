@@ -114,7 +114,7 @@
 .coastline {
     fill: none;
     stroke: var(--color-map-border);
-    stroke-width: 1px;
+    stroke-width: 0.75px;
     stroke-linejoin: round;
     pointer-events: none;
 }

@@ -29,6 +29,8 @@
     "grouping.none": "Don't group",
     "grouping.island": "Island",
     "grouping.region": "Region",
+    "menu.randomize_questions": "Randomize Questions",
+    "menu.randomize_questions_explanation": "Select to randomize the order of questions. When unchecked progression is south to north.",
     "menu.start": "Start",
     "play.back_to_menu": "Back to menu",
     "quiz.find": "Find",

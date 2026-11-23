@@ -29,6 +29,8 @@
     "grouping.none": "Sin agrupar",
     "grouping.island": "Isla",
     "grouping.region": "Región",
+    "menu.randomize_questions": "Preguntas aleatorias",
+    "menu.randomize_questions_explanation": "Selecciona para que las preguntas salgan en orden aleatorio. Por defecto se avanza de sur a norte.",
     "menu.start": "Empezar",
     "play.back_to_menu": "Volver al menú",
     "quiz.find": "Encuentra",

@@ -17,7 +17,8 @@ export const INITIAL_MENU_SELECTION_STATE: MenuSelectionState = {
     last_region_id: "kyushu",
     progressive_stages: ["islands", "regions", "prefectures"],
     progression_style: "area_by_area",
-    prefecture_grouping: "region"
+    prefecture_grouping: "region",
+    should_randomize_questions: true
 };
 
 const toggleStage = (selected_stages: QuizType[], toggled_stage: QuizType): QuizType[] => {
@@ -116,6 +117,11 @@ export const menuSelectionReducer = (state: MenuSelectionState, action: MenuSele
         }
         case "setPrefectureGrouping": {
             next_state = { ...state, prefecture_grouping: action.prefecture_grouping };
+            break;
+        }
+        case "toggleRandomizeQuestions": {
+            const should_randomize_questions: boolean = state.should_randomize_questions === false;
+            next_state = { ...state, should_randomize_questions: should_randomize_questions };
             break;
         }
     }

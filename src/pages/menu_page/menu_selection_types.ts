@@ -17,6 +17,7 @@ export interface MenuSelectionState {
     progressive_stages: QuizType[];
     progression_style: ProgressionStyle;
     prefecture_grouping: PrefectureGrouping;
+    should_randomize_questions: boolean;
 }
 
 export type MenuSelectionAction =
@@ -26,4 +27,5 @@ export type MenuSelectionAction =
     | { type: "setPrefectureScope"; prefecture_scope: PrefectureScope }
     | { type: "toggleProgressiveStage"; stage: QuizType }
     | { type: "setProgressionStyle"; progression_style: ProgressionStyle }
-    | { type: "setPrefectureGrouping"; prefecture_grouping: PrefectureGrouping };
+    | { type: "setPrefectureGrouping"; prefecture_grouping: PrefectureGrouping }
+    | { type: "toggleRandomizeQuestions" };
