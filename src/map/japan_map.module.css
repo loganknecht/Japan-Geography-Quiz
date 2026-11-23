@@ -101,6 +101,16 @@
     fill: var(--color-land-hover);
 }
 
+.tap_area {
+    cursor: pointer;
+    fill: none;
+    stroke: transparent;
+    stroke-width: 16px;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    pointer-events: all;
+}
+
 .coastline {
     fill: none;
     stroke: var(--color-map-border);
