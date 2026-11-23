@@ -128,7 +128,9 @@ export default defineConfig(
                     prefix: ["is_", "has_", "should_", "can_", "was_", "IS_", "HAS_", "SHOULD_", "CAN_", "WAS_"]
                 },
                 { selector: "variable", types: ["function"], format: ["camelCase", "PascalCase"] },
+                { selector: "variable", filter: { regex: "Context$", match: true }, format: ["PascalCase"] },
                 { selector: "parameter", format: ["snake_case"], leadingUnderscore: "allow" },
+                { selector: "parameter", types: ["function"], format: ["camelCase"] },
                 { selector: ["classMethod", "objectLiteralMethod", "typeMethod"], format: ["camelCase"] },
                 { selector: "objectLiteralProperty", format: null },
                 { selector: "typeLike", format: ["PascalCase"] },
