@@ -29,6 +29,8 @@
     "grouping.none": "まとめない",
     "grouping.island": "[島|しま]ごと",
     "grouping.region": "[地方|ちほう]ごと",
+    "menu.randomize_questions": "[問題|もんだい]をランダムにする",
+    "menu.randomize_questions_explanation": "チェックすると[問題|もんだい]の[順番|じゅんばん]がランダムになります。[通常|つうじょう]は[南|みなみ]から[北|きた]へ[進|すす]みます。",
     "menu.start": "スタート",
     "play.back_to_menu": "メニューに[戻|もど]る",
     "quiz.find": "[探|さが]せ！",

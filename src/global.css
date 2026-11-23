@@ -10,6 +10,12 @@
     --color-checker-dark: #e8891a;
     --color-panel-top: #3a5ae0;
     --color-panel-bottom: #1d2c8f;
+    --color-layer-islands-top: #139a9c;
+    --color-layer-islands-bottom: #0b5d63;
+    --color-layer-regions-top: #8247e5;
+    --color-layer-regions-bottom: #4a1fa0;
+    --color-layer-prefectures-top: #c91f7f;
+    --color-layer-prefectures-bottom: #7d0f52;
     --color-panel-shadow: #0d1450;
     --color-panel-text: #fff;
     --color-panel-heading: #ffe98a;

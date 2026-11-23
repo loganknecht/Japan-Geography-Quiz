@@ -24,6 +24,7 @@ export interface ProgressiveQuizSetup {
     stages: QuizType[];
     progression_style: ProgressionStyle;
     prefecture_grouping: PrefectureGrouping;
+    should_randomize_questions: boolean;
 }
 
 export type QuizSetup = SingleQuizSetup | ProgressiveQuizSetup;

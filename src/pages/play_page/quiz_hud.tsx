@@ -123,8 +123,10 @@ export const QuizHud = ({ quiz_session, current_step, answer_id }: QuizHudProps)
             <TryPips miss_count={quiz_session.miss_count} />
         );
 
+    const hud_class_name: string = `${styles.hud} ${styles[`hud_${current_step.quiz_type}`]}`;
+
     const hud_element: JSX.Element = (
-        <section className={styles.hud} aria-live="polite">
+        <section className={hud_class_name} aria-live="polite">
             <div className={styles.prompt}>
                 <span className={styles.prompt_label}>
                     <TranslatedText translation_key="quiz.find" />

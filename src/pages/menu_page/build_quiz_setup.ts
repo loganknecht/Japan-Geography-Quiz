@@ -14,7 +14,8 @@ export const buildQuizSetup = (menu_selection: MenuSelectionState): QuizSetup =>
                   play_mode: "progressive",
                   stages: menu_selection.progressive_stages,
                   progression_style: menu_selection.progression_style,
-                  prefecture_grouping: menu_selection.prefecture_grouping
+                  prefecture_grouping: menu_selection.prefecture_grouping,
+                  should_randomize_questions: menu_selection.should_randomize_questions
               };
     return quiz_setup;
 };
