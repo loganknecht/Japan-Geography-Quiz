@@ -81,6 +81,30 @@ const Coastline = ({ paths }: CoastlineProps): JSX.Element => {
     return coastline_element;
 };
 
+interface TapAreasProps {
+    paths: PrefectureMapData["paths"];
+    onPathClick: (prefecture_id: PrefectureId, event: MouseEvent<SVGPathElement>) => void;
+}
+
+const TapAreas = ({ paths, onPathClick }: TapAreasProps): JSX.Element => {
+    const path_elements: JSX.Element[] = [];
+    for (const prefecture of PREFECTURES_NORTH_TO_SOUTH) {
+        const path_data: string | undefined = paths[prefecture.code];
+        const has_no_path = path_data === undefined;
+        if (has_no_path === true) {
+            continue;
+        }
+        const handleClick = (event: MouseEvent<SVGPathElement>): void => {
+            onPathClick(prefecture.id, event);
+        };
+        path_elements.push(
+            <path key={prefecture.id} className={styles.tap_area} d={path_data} onClick={handleClick} />
+        );
+    }
+    const tap_areas_element: JSX.Element = <g aria-hidden="true">{path_elements}</g>;
+    return tap_areas_element;
+};
+
 interface PrefecturePathsProps {
     paths: PrefectureMapData["paths"];
     key_suffix: string;
@@ -226,6 +250,7 @@ export const JapanMap = ({
                     <text className={styles.inset_label} x={INSET_LABEL_INSET_X} y={INSET_LABEL_INSET_Y}>
                         {inset_label_text}
                     </text>
+                    <TapAreas paths={inset.paths} onPathClick={handlePathClick} />
                     <Coastline paths={inset.paths} />
                     <PrefecturePaths
                         paths={inset.paths}
